@@ -23,8 +23,7 @@ This Python script allows you to generate random US phone numbers based on a sel
 }
 
 
-
-How to Use:
+### How to Use:
 1. Clone or Download the Repository:
 Clone or download the repository to your local machine.
 
