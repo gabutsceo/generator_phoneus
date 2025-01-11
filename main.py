@@ -4,19 +4,19 @@ import json
 
 def generate_us_numbers(quantity, state_code):
     """
-    Generate US numbers with a specific state code.
+    Generate US numbers with a specific state code, including the +1 country code.
     
     Args:
         quantity (int): Number of US numbers to generate.
         state_code (str): The area code for the state.
 
     Returns:
-        list: List of generated US numbers.
+        list: List of generated US numbers with +1 country code.
     """
     numbers = []
     for _ in range(quantity):
         # Ensure the generated number is 10 digits including the area code
-        number = f"{state_code}{random.randint(1000000, 9999999):07d}"
+        number = f"+1{state_code}{random.randint(1000000, 9999999):07d}"
         numbers.append(number)
     return numbers
 
@@ -104,4 +104,3 @@ def handle_user_input():
 
 if __name__ == "__main__":
     handle_user_input()
-
